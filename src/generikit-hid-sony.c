@@ -3001,8 +3001,10 @@ static int sony_probe(struct hid_device *hdev, const struct hid_device_id *id)
 	if (!strcmp(hdev->name, "FutureMax Dance Mat"))
 		quirks |= FUTUREMAX_DANCE_MAT;
 
-	if (!strcmp(hdev->name, "SHANWAN PS3 GamePad") ||
-	    !strcmp(hdev->name, "ShanWan PS(R) Ga`epad"))
+	if (!strcmp(hdev->name, "SHANWAN PS3 GamePad")
+	    || !strcmp(hdev->name, "ShanWan PS(R) Ga`epad")
+      || !strcmp(hdev->name, "Android Gamepad")
+     )
 		quirks |= SHANWAN_GAMEPAD;
 
 	if (!strcmp(hdev->name, "PS3 Controller"))
